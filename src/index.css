@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-bounce-slow: bounce 2s infinite;
+}
+
+@utility ticket-clip {
+  clip-path: polygon(
+    0% 0%, 
+    100% 0%, 
+    100% calc(50% - 10px), 
+    97% 50%, 
+    100% calc(50% + 10px), 
+    100% 100%, 
+    0% 100%, 
+    0% calc(50% + 10px), 
+    3% 50%, 
+    0% calc(50% - 10px)
+  );
+}
+
+body {
+  background-image: linear-gradient(to top right, var(--color-rose-50), var(--color-slate-50), var(--color-pink-50));
+  color: var(--color-slate-800);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
